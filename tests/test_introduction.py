@@ -2,7 +2,6 @@ import pytest
 from exercises.introduction import area, bouncer, character_frequency, is_of_age, overlapping, repeat, reverse, rovarsprak, to_seconds, travel_price, vowel
 
 
-@pytest.mark.skip('Not implemented yet.')
 def test_repeat():
     assert repeat("hej", 2) == "hejhej"
     assert repeat("då", -1) == ""
