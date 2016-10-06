@@ -66,20 +66,21 @@ def test(with_coverage, no_html, no_report, verbose, only):
 @click.option('--stats', is_flag=True)
 def lint(all, stats):
     """Run the linter."""
-    from flake8 import main as flake8
-    import sys
+    import os
 
     if all:
         click.echo('Running linter (including skeleton code).')
-        sys.argv = ['flake8', '.']
+        args = ['flake8', '.']
     else:
         click.echo('Running Linter...')
-        sys.argv = ['flake8', APP_FOLDER]
+        args = ['flake8', APP_FOLDER]
 
     if stats:
-        sys.argv.extend(['--statistics', '-qq'])
+        args.extend(['--statistics', '-qq'])
 
-    flake8.main()
+    exit_code = os.system(' '.join(args))
+
+    raise SystemExit(exit_code)
 
 
 if __name__ == "__main__":
