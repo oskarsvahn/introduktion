@@ -2,6 +2,7 @@ import pytest
 from exercises.introduction import area, bouncer, character_frequency, is_of_age, overlapping, repeat, reverse, rovarsprak, to_seconds, travel_price, vowel
 
 
+@pytest.mark.skip('Not implemented yet.')
 def test_repeat():
     assert repeat("hej", 2) == "hejhej"
     assert repeat("då", -1) == ""
@@ -43,11 +44,12 @@ def test_is_of_age():
 
 
 @pytest.mark.skip('Not implemented yet.')
-def test_vowel():
-    assert vowel('a') == True
-    assert vowel('Y') == True
-    assert vowel('b') == False
-    assert vowel('C') == False
+@pytest.mark.parametrize('character, expected', [
+('a', True), ('e', True), ('i', True), ('o', True), ('u', True), ('y', True), ('å', True), ('ä', True), ('ö', True),
+('A', True), ('E', True), ('I', True), ('O', True), ('U', True), ('Y', True), ('Å', True), ('Ä', True), ('Ö', True),
+('k', False), ('h', False), ('x', False), ('R', False), ('r', False), ('j', False), ('C', False), ('p', False), ('T', False)])
+def test_vowel(character, expected):
+    assert vowel(character) == expected
 
 
 @pytest.mark.skip('Not implemented yet.')
