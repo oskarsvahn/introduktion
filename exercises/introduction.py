@@ -27,22 +27,28 @@ def rovarsprak(string):
 
 def area(width, height):
     """Returnerar arean av en figur med bredden 'width' och höjden 'height'."""
-    pass
+
+    return width * height
 
 
 def to_seconds(time):
     """Returnerar en float `time` (timmar) till sekunder."""
-    pass
+    return 3600 * time
 
 
 def is_of_age(age):
     """Returnerar true om 'age' är större eller lika med 18, annars false."""
-    pass
+    if age > 18:
+        return True
+    return False
 
 
 def vowel(character):
     """Returnerar true om 'character' är en vokal, annart false."""
-    pass
+    if character.lower() in 'aouieyåäö':
+        return True
+    else:
+        return False
 
 
 def reverse(words):
@@ -51,7 +57,7 @@ def reverse(words):
     words = "Hej på dig!" ska till exempel returnera
     strängen "!gid åp jeH".
     """
-    pass
+    return words[::-1]
 
 
 def overlapping(list1, list2):
@@ -66,7 +72,13 @@ def is_palindrome(words):
     framlänges eller baklänges, annars false. Ett exempel på palindrom är orden
     'ni talar bra latin' som kan läsas likadant åt båda hållen.
     """
-    pass
+    words= words.replace(" ", "")
+    words = words.lower()
+
+    if words[::-1] == words:
+        return True
+    else:
+        return False
 
 
 def what_type(var):
@@ -74,7 +86,8 @@ def what_type(var):
 
     var = 5 ska till exempel returnera strängen "integer".
     """
-    pass
+    if var == int():
+        return "integer"
 
 
 def travel_price(distance, consumtion, price):
@@ -83,7 +96,7 @@ def travel_price(distance, consumtion, price):
     Resan är `distance` km lång, och görs med en bil som drar `consumption`
     liter bensin per mil då bensinen kostar `price` kr per liter.
     """
-    pass
+    return abs(distance * consumtion * price/10)
 
 
 def character_frequency(words):
