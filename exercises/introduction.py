@@ -6,7 +6,8 @@ def repeat(string, num):
 
     Returnerar en ny sträng eller en tom sträng om num är negativt.
     """
-    pass
+    return string * num
+
 
 
 def bouncer(items):
