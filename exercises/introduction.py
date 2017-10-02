@@ -9,6 +9,7 @@ def repeat(string, num):
     return string * num
 
 
+
 def bouncer(items):
     """Tar bort alla värden i items (arg 1) som evalueras till False."""
     pass
@@ -79,15 +80,6 @@ def is_palindrome(words):
         return True
     else:
         return False
-
-
-def what_type(var):
-    """Returnerar en sträng med namnet av typen som variabeln 'var' tillhör.
-
-    var = 5 ska till exempel returnera strängen "integer".
-    """
-    if var == int():
-        return "integer"
 
 
 def travel_price(distance, consumtion, price):
