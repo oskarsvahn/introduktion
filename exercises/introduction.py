@@ -8,6 +8,7 @@ def repeat(string, num):
     """
     pass
 
+
 def bouncer(items):
     """Tar bort alla värden i items (arg 1) som evalueras till False."""
     pass
@@ -64,14 +65,6 @@ def is_palindrome(words):
     Det vill säga en följd tecken som blir likadan oavsett om den läses
     framlänges eller baklänges, annars false. Ett exempel på palindrom är orden
     'ni talar bra latin' som kan läsas likadant åt båda hållen.
-    """
-    pass
-
-
-def what_type(var):
-    """Returnerar en sträng med namnet av typen som variabeln 'var' tillhör.
-
-    var = 5 ska till exempel returnera strängen "integer".
     """
     pass
 
