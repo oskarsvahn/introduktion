@@ -12,7 +12,18 @@ def repeat(string, num):
 
 def bouncer(items):
     """Tar bort alla värden i items (arg 1) som evalueras till False."""
-    pass
+    result = []
+    for item in items:
+        if item:
+            result.append(item)
+    return result
+
+
+        #     return ""
+        #     item.replace(", ", "")
+        # else:
+        #     return item
+
 
 
 def rovarsprak(string):
