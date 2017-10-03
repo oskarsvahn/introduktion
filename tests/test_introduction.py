@@ -69,7 +69,7 @@ def test_overlapping():
 
 def test_travel_price():
     assert travel_price(20, 0.6, 12) == 14.4
-    assert abs(travel_price(105.5, 0.8, 14)) <= 118.1600000001
+    assert abs(travel_price(105.5, 0.8, 14)) - 118.16 >= 0.0000001
 
 
 def test_palindrome():
