@@ -34,7 +34,20 @@ def rovarsprak(string):
 
     `Wikipedia<https://sv.wikipedia.org/wiki/R%C3%B6varspr%C3%A5ket>`_
     """
-    pass
+    new_string = ''
+    for letter in string:
+        if not letter in "aeiouyåäöAEIOUÅÄÖ1234567890. ":
+            if letter == letter.lower():
+               new_string = new_string + letter +'o'+ letter
+            else:
+               new_string = new_string + letter +'O'+ letter
+        else:
+            new_string = new_string + letter
+
+
+    return new_string
+
+
 
 
 def area(width, height):

@@ -17,7 +17,7 @@ def test_bouncer():
     assert bouncer([0, 0.0, 0j, {}, (), [], "hello"]) == ["hello"]
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_rovarsprak():
     assert rovarsprak("hej") == "hohejoj"
     assert rovarsprak("Hej") == "HOHejoj"
