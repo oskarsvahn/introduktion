@@ -59,7 +59,7 @@ def test_reverse():
     assert reverse('a') == 'a'
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_overlapping():
     assert overlapping([1,2,3], [3,4,5]) == True
     assert overlapping([1.23, 'test', 5], [1.24, 'test1', 'test']) == True

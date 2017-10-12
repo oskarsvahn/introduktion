@@ -87,7 +87,13 @@ def reverse(words):
 
 def overlapping(list1, list2):
     """Returnerar True om listorna har åtminstone ett gemensamt objekt."""
-    pass
+    if set(list1) & set(list2):
+        return True
+    else:
+        return False
+
+
+
 
 
 def is_palindrome(words):
@@ -121,4 +127,7 @@ def character_frequency(words):
     Returnerar en dictionary med varje bokstav i strängen `words` som nyckel
     till ett värde av antalet gånger bokstaven uppkommer i stängen.
     """
-    pass
+    d = {}
+    for k in words:
+        d[k] += 1
+    return d
